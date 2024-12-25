@@ -1,0 +1,150 @@
+number,structure,operation,question,response,valid,reason
+1,linked_list,create,"Create a linked list with the following values: 93, 40, 32, 69, 80.","json
+Copy code
+{
+  ""linked_list"": {
+    ""head"": {
+      ""value"": 93,
+      ""next"": {
+        ""value"": 40,
+        ""next"": {
+          ""value"": 32,
+          ""next"": {
+            ""value"": 69,
+            ""next"": {
+              ""value"": 80,
+              ""next"": null
+            }
+          }
+        }
+      }
+    }
+  }
+}",True,Operation appears valid
+2,linked_list,Insert at beginning,"For the linked_list created earlier, Insert at beginning value(s) 1.","json
+Copy code
+{
+  ""linked_list"": {
+    ""head"": {
+      ""value"": 1,
+      ""next"": {
+        ""value"": 93,
+        ""next"": {
+          ""value"": 40,
+          ""next"": {
+            ""value"": 32,
+            ""next"": {
+              ""value"": 69,
+              ""next"": {
+                ""value"": 80,
+                ""next"": null
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}",False,Missing updated list structure
+3,linked_list,Insert at end,"For the linked_list created earlier, Insert at end value(s) 5.","json
+Copy code
+{
+  ""linked_list"": {
+    ""head"": {
+      ""value"": 1,
+      ""next"": {
+        ""value"": 93,
+        ""next"": {
+          ""value"": 40,
+          ""next"": {
+            ""value"": 32,
+            ""next"": {
+              ""value"": 69,
+              ""next"": {
+                ""value"": 80,
+                ""next"": {
+                  ""value"": 5,
+                  ""next"": null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}",False,Missing updated list structure
+4,linked_list,Delete from beginning,"For the linked_list created earlier, Delete from beginning.","json
+Copy code
+{
+  ""linked_list"": {
+    ""head"": {
+      ""value"": 93,
+      ""next"": {
+        ""value"": 40,
+        ""next"": {
+          ""value"": 32,
+          ""next"": {
+            ""value"": 69,
+            ""next"": {
+              ""value"": 80,
+              ""next"": {
+                ""value"": 5,
+                ""next"": null
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}",False,Missing updated list structure
+5,linked_list,Delete from end,"For the linked_list created earlier, Delete from end.","json
+Copy code
+{
+  ""linked_list"": {
+    ""head"": {
+      ""value"": 93,
+      ""next"": {
+        ""value"": 40,
+        ""next"": {
+          ""value"": 32,
+          ""next"": {
+            ""value"": 69,
+            ""next"": {
+              ""value"": 80,
+              ""next"": null
+            }
+          }
+        }
+      }
+    }
+  }
+}",False,Missing updated list structure
+6,linked_list,Delete value,"For the linked_list created earlier, Delete value value(s) 93.","json
+Copy code
+{
+  ""linked_list"": {
+    ""head"": {
+      ""value"": 40,
+      ""next"": {
+        ""value"": 32,
+        ""next"": {
+          ""value"": 69,
+          ""next"": {
+            ""value"": 80,
+            ""next"": null
+          }
+        }
+      }
+    }
+  }
+}",False,Missing updated list structure
+7,linked_list,Search value,"For the linked_list created earlier, Search value value(s) 93.","json
+Copy code
+{
+  ""search_result"": {
+    ""found"": false,
+    ""message"": ""Value 93 not found in the linked list.""
+  }
+}",True,Operation appears valid

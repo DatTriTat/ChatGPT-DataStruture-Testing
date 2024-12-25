@@ -1,0 +1,96 @@
+number,structure,operation,question,response,valid,reason
+1,tree,create,"Create a binary search tree with the following values: 46, 98, 24, 15, 25.","json
+Copy code
+{
+  ""binary_search_tree"": {
+    ""value"": 46,
+    ""left"": {
+      ""value"": 24,
+      ""left"": {
+        ""value"": 15,
+        ""left"": null,
+        ""right"": null
+      },
+      ""right"": {
+        ""value"": 25,
+        ""left"": null,
+        ""right"": null
+      }
+    },
+    ""right"": {
+      ""value"": 98,
+      ""left"": null,
+      ""right"": null
+    }
+  }
+}",True,Operation appears valid
+2,tree,Insert,"For the tree created earlier, Insert value(s) 3.","json
+Copy code
+{
+  ""binary_search_tree"": {
+    ""value"": 46,
+    ""left"": {
+      ""value"": 24,
+      ""left"": {
+        ""value"": 15,
+        ""left"": {
+          ""value"": 3,
+          ""left"": null,
+          ""right"": null
+        },
+        ""right"": null
+      },
+      ""right"": {
+        ""value"": 25,
+        ""left"": null,
+        ""right"": null
+      }
+    },
+    ""right"": {
+      ""value"": 98,
+      ""left"": null,
+      ""right"": null
+    }
+  }
+}",False,Missing updated tree structure
+3,tree,Delete,"For the tree created earlier, Delete value(s) 24.","json
+Copy code
+{
+  ""binary_search_tree"": {
+    ""value"": 46,
+    ""left"": {
+      ""value"": 25,
+      ""left"": {
+        ""value"": 15,
+        ""left"": {
+          ""value"": 3,
+          ""left"": null,
+          ""right"": null
+        },
+        ""right"": null
+      },
+      ""right"": null
+    },
+    ""right"": {
+      ""value"": 98,
+      ""left"": null,
+      ""right"": null
+    }
+  }
+}",False,Should indicate non-existent value
+4,tree,Search,"For the tree created earlier, Search value(s) 15.","json
+Copy code
+{
+  ""search_result"": {
+    ""found"": true,
+    ""value"": 15
+  }
+}",False,Search result incorrect
+5,tree,Search,"For the tree created earlier, Search value(s) 4.","json
+Copy code
+{
+  ""search_result"": {
+    ""found"": false,
+    ""value"": 4
+  }
+}",True,Search result incorrect

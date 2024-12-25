@@ -1,0 +1,26 @@
+number,structure,operation,question,response,valid,reason
+1,queue,create,"Create a queue with the following values: 23, 28, 19, 89, 35.","json
+Copy code
+{
+  ""queue"": [23, 28, 19, 89, 35]
+}",True,Operation appears valid
+2,queue,Enqueue,"For the queue created earlier, Enqueue value(s) 3.","json
+Copy code
+{
+  ""queue"": [23, 28, 19, 89, 35, 3]
+}",False,Missing updated queue state
+3,queue,Dequeue,"For the queue created earlier, Dequeue value(s) 1.","json
+Copy code
+{
+  ""queue"": [28, 19, 89, 35, 3]
+}",False,Missing dequeued value
+4,queue,Check if empty,"For the queue created earlier, Check if empty.","json
+Copy code
+{
+  ""is_empty"": false
+}",False,Missing existence check result
+5,queue,Get front,"For the queue created earlier, Get front.","json
+Copy code
+{
+  ""front"": 28
+}",True,Operation appears valid

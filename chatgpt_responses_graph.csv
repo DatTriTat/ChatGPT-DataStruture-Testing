@@ -1,0 +1,78 @@
+number,structure,operation,question,response,valid,reason
+1,graph,create,"Create a graph with the following nodes: 69, 46, 18, 59, 82. Then add random edge weights between consecutive nodes.","json
+Copy code
+{
+  ""nodes"": [69, 46, 18, 59, 82],
+  ""edges"": [
+    {""from"": 69, ""to"": 46, ""weight"": 12},
+    {""from"": 46, ""to"": 18, ""weight"": 7},
+    {""from"": 18, ""to"": 59, ""weight"": 15},
+    {""from"": 59, ""to"": 82, ""weight"": 9}
+  ]
+}",True,Operation appears valid
+2,graph,Update node,"For the graph created earlier, Update node values 69, 18, and edge weight 5.","json
+Copy code
+{
+  ""nodes"": [69, 46, 18, 59, 82],
+  ""edges"": [
+    {""from"": 69, ""to"": 46, ""weight"": 12},
+    {""from"": 46, ""to"": 18, ""weight"": 7},
+    {""from"": 18, ""to"": 59, ""weight"": 15},
+    {""from"": 59, ""to"": 82, ""weight"": 9},
+    {""from"": 69, ""to"": 46, ""weight"": 5}
+  ]
+}",True,Operation appears valid
+3,graph,Update node,"For the graph created earlier, Update node values 82, 4, and edge weight 1.","json
+Copy code
+{
+  ""nodes"": [69, 46, 18, 59, 82, 4],
+  ""edges"": [
+    {""from"": 69, ""to"": 46, ""weight"": 5},
+    {""from"": 46, ""to"": 18, ""weight"": 7},
+    {""from"": 18, ""to"": 59, ""weight"": 15},
+    {""from"": 59, ""to"": 82, ""weight"": 9},
+    {""from"": 82, ""to"": 4, ""weight"": 1}
+  ]
+}",True,Operation appears valid
+4,graph,Insert node,"For the graph created earlier, Insert node value 1 and edge weight 7.","json
+Copy code
+{
+  ""nodes"": [69, 46, 18, 59, 82, 4, 1],
+  ""edges"": [
+    {""from"": 69, ""to"": 46, ""weight"": 5},
+    {""from"": 46, ""to"": 18, ""weight"": 7},
+    {""from"": 18, ""to"": 59, ""weight"": 15},
+    {""from"": 59, ""to"": 82, ""weight"": 9},
+    {""from"": 82, ""to"": 4, ""weight"": 1},
+    {""from"": 1, ""to"": 69, ""weight"": 7}
+  ]
+}",True,Operation appears valid
+5,graph,Delete node,"For the graph created earlier, Delete node value(s) 69.","json
+Copy code
+{
+  ""nodes"": [46, 18, 59, 82, 4, 1],
+  ""edges"": [
+    {""from"": 46, ""to"": 18, ""weight"": 7},
+    {""from"": 18, ""to"": 59, ""weight"": 15},
+    {""from"": 59, ""to"": 82, ""weight"": 9},
+    {""from"": 82, ""to"": 4, ""weight"": 1},
+    {""from"": 1, ""to"": 46, ""weight"": 7}
+  ]
+}",False,Incorrect deletion response
+6,graph,Check path,"For the graph created earlier, Check path value 18 and edge weight 18.","json
+Copy code
+{
+  ""nodes"": [46, 18, 59, 82, 4, 1],
+  ""edges"": [
+    {""from"": 46, ""to"": 18, ""weight"": 7},
+    {""from"": 18, ""to"": 59, ""weight"": 15},
+    {""from"": 59, ""to"": 82, ""weight"": 9},
+    {""from"": 82, ""to"": 4, ""weight"": 1},
+    {""from"": 1, ""to"": 46, ""weight"": 7}
+  ],
+  ""path_check"": {
+    ""node"": 18,
+    ""edge_weight"": 18,
+    ""exists"": false
+  }
+}",False,Missing path check result
